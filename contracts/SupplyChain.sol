@@ -16,6 +16,14 @@ contract SupplyChain {
   enum State { ForSale, Sold, Shipped, Received }
 
   // <struct Item: name, sku, price, state, seller, and buyer>
+  struct Item {
+    string name;
+    uint sku;
+    uint price;
+    address payable seller;
+    address payable buyer;
+    State state;
+  }
   
   /* 
    * Events
